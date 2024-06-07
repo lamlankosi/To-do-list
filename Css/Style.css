@@ -1,58 +1,85 @@
-*,
-*,::after
-*,::before{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dd8900;
+}
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color:#FFA500;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(27, 130, 51, 0.1);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  .container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    text-align: center;
-  }
-  
-  input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
+.todo-app {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-  
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#new-todo {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color:#904a00;
+  color: white;
+  cursor: pointer;
 }
-  
-ul {
-    list-style-type: none;
-    padding: 0;
+
+button:hover {
+  background-color: #FF6347;
 }
-  
-li {
-    margin-bottom: 10px;
+
+#todoList {
+  list-style-type: none;
+  padding: 0;
 }
-  
-  .delete-btn {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 10px;
-    cursor: pointer;
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
-  
+
+.todo-item.completed .todo-name {
+  text-decoration: line-through;
+  color: black;
+}
+
+.todo-name {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.remove-button {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  color: #c82333;
+}
