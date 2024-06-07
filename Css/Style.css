@@ -83,3 +83,19 @@ button:hover {
 .remove-button:hover {
   color: #c82333;
 }
+
+@media(width < 600px){
+  .input-container{
+    flex-direction: row;
+  }
+
+  #new-todo{
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  button{
+    width: auto;
+    margin-left: 10px;
+  }
+}
